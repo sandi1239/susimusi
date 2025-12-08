@@ -1,4 +1,4 @@
-import { Heart, Mail, MapPin, Facebook, Instagram } from "lucide-react";
+import { Heart, Mail, MapPin, Phone, Facebook, Instagram } from "lucide-react";
 import logoImage from "@/assets/logo.png";
 
 const Footer = () => {
@@ -16,7 +16,7 @@ const Footer = () => {
                 alt="Šuši Muši logo" 
                 className="w-10 h-10 object-contain"
               />
-              <h3 className="text-2xl font-heading font-bold">Šuši Muši</h3>
+              <h3 className="text-2xl font-heading font-bold">ŠUŠI MUŠI</h3>
             </div>
             <p className="text-cream/70 mb-6 leading-relaxed text-sm md:text-base">
               Unikatni ročni izdelki iz lesa, ki vašemu domu dodajo 
@@ -76,6 +76,15 @@ const Footer = () => {
                 </a>
               </div>
               <div className="flex items-start gap-3">
+                <Phone className="w-5 h-5 mt-0.5 text-cream/50 flex-shrink-0" />
+                <a
+                  href="tel:+38631747893"
+                  className="text-cream/70 hover:text-cream transition-colors text-sm md:text-base"
+                >
+                  031-747-893
+                </a>
+              </div>
+              <div className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 mt-0.5 text-cream/50 flex-shrink-0" />
                 <span className="text-cream/70 text-sm md:text-base">
                   Budinci, Prekmurje<br />
@@ -90,7 +99,7 @@ const Footer = () => {
         <div className="pt-8 border-t border-cream/10">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs sm:text-sm text-cream/50">
             <p>
-              © {currentYear} Šuši Muši. Vse pravice pridržane.
+              © {currentYear} ŠUŠI MUŠI. Vse pravice pridržane.
             </p>
             <p className="flex items-center gap-1">
               Izdelano z <Heart className="w-4 h-4 text-christmas-red fill-christmas-red" /> v Sloveniji
