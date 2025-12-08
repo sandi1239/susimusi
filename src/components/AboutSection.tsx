@@ -59,6 +59,15 @@ const AboutSection = () => {
               Danes vsak izdelek nastane z ljubeznijo, potrpežljivostjo in s pozornostjo do najmanjših detajlov.
             </p>
 
+            {/* Mobile Image - above features */}
+            <div className="block lg:hidden mb-6 rounded-xl overflow-hidden shadow-warm">
+              <img
+                src={logSnowmenImage}
+                alt="Leseni izdelki ŠUŠI MUŠI"
+                className="w-full h-48 sm:h-56 object-cover"
+              />
+            </div>
+
             {/* Features */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
               {features.map((feature, index) => (
