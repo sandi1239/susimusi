@@ -50,7 +50,7 @@ const AboutSection = () => {
               <span className="text-primary">ŠUŠI MUŠI</span>?
             </h2>
             <p className="text-base sm:text-lg text-muted-foreground mb-4 sm:mb-6 leading-relaxed">
-              Sem <strong>Jerneja Lainšček</strong> iz majhne vasice Budinci v srcu Prekmurja. 
+              Sem <strong>Jerneja Lainšček</strong> iz majhne vasice Dolenci v srcu Prekmurja.
               Z osebno dopolnilno dejavnostjo ustvarjam unikatne lesene izdelke, 
               ki prinašajo toplino in veselje v vsak dom.
             </p>

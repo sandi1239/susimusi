@@ -87,7 +87,7 @@ const Footer = () => {
               <div className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 mt-0.5 text-cream/50 flex-shrink-0" />
                 <span className="text-cream/70 text-sm md:text-base">
-                  Budinci, Prekmurje<br />
+                  Dolenci, Prekmurje<br />
                   Slovenija
                 </span>
               </div>
