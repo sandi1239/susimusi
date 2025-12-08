@@ -60,12 +60,17 @@ const AboutSection = () => {
             </p>
 
             {/* Mobile Image - above features */}
-            <div className="block lg:hidden mb-6 rounded-xl overflow-hidden shadow-warm">
-              <img
-                src={logSnowmenImage}
-                alt="Leseni izdelki ŠUŠI MUŠI"
-                className="w-full h-48 sm:h-56 object-cover"
-              />
+            <div className="relative block lg:hidden mb-6">
+              <div className="rounded-xl overflow-hidden shadow-warm">
+                <img
+                  src={logSnowmenImage}
+                  alt="Leseni izdelki ŠUŠI MUŠI"
+                  className="w-full h-48 sm:h-56 object-cover"
+                />
+              </div>
+              {/* Decorative Frame */}
+              <div className="absolute -top-3 -left-3 w-16 h-16 border-t-4 border-l-4 border-christmas-red rounded-tl-2xl" />
+              <div className="absolute -bottom-3 -right-3 w-16 h-16 border-b-4 border-r-4 border-christmas-green rounded-br-2xl" />
             </div>
 
             {/* Features */}
