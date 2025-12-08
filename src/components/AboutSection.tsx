@@ -31,6 +31,7 @@ const AboutSection = () => {
                 src={logSnowmenImage}
                 alt="Jerneja Lainšček z družino in lesenimi izdelki"
                 className="w-full h-auto object-contain"
+                loading="lazy"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-wood-dark/40 to-transparent" />
             </div>
@@ -66,6 +67,7 @@ const AboutSection = () => {
                   src={logSnowmenImage}
                   alt="Leseni izdelki ŠUŠI MUŠI"
                   className="w-full h-auto"
+                  loading="lazy"
                 />
               </div>
               {/* Decorative Frame */}
