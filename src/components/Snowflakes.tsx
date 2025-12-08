@@ -13,7 +13,7 @@ const Snowflakes = () => {
   const [snowflakes, setSnowflakes] = useState<Snowflake[]>([]);
 
   useEffect(() => {
-    const flakes: Snowflake[] = Array.from({ length: 35 }, (_, i) => ({
+    const flakes: Snowflake[] = Array.from({ length: 20 }, (_, i) => ({
       id: i,
       left: Math.random() * 100,
       size: Math.random() * 4 + 2,
