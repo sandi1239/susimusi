@@ -30,7 +30,7 @@ const AboutSection = () => {
               <img
                 src={logSnowmenImage}
                 alt="Jerneja Lainšček z družino in lesenimi izdelki"
-                className="w-full h-auto object-cover"
+                className="w-full h-auto max-h-[400px] object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-wood-dark/40 to-transparent" />
             </div>
