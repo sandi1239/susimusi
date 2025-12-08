@@ -1,4 +1,4 @@
-import { Star, Quote } from "lucide-react";
+import { Star, Quote, BadgeCheck } from "lucide-react";
 
 const testimonials = [
   {
@@ -7,6 +7,7 @@ const testimonials = [
     location: "Ljubljana",
     rating: 5,
     text: "Naročila sem lesene škratke za pred vhod in so absolutno čudoviti! Vsi sosedje sprašujejo, kje sem jih dobila. Jerneja je res umetnica!",
+    avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop&crop=face",
   },
   {
     id: 2,
@@ -14,6 +15,7 @@ const testimonials = [
     location: "Maribor",
     rating: 5,
     text: "Za hčerkin rojstni dan smo naročili personalizirano tablo. Izdelek je presegel vsa pričakovanja - tako lep in kvaliteten. Toplo priporočamo!",
+    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face",
   },
   {
     id: 3,
@@ -21,6 +23,7 @@ const testimonials = [
     location: "Murska Sobota",
     rating: 5,
     text: "Že drugo leto zapored naročam božične dekoracije pri Jerneji. Vedno me preseneti z novimi idejami in izjemno kakovostjo. Najboljša izbira!",
+    avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face",
   },
   {
     id: 4,
@@ -28,6 +31,7 @@ const testimonials = [
     location: "Celje",
     rating: 5,
     text: "Iskal sem unikaten dar za ženo in našel Šuši Muši. Leseni snežaki so sedaj naš najljubši del praznične dekoracije. Hvala za čudovit izdelek!",
+    avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face",
   },
 ];
 
@@ -80,15 +84,23 @@ const TestimonialsSection = () => {
               </p>
 
               {/* Author */}
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-primary/10 flex items-center justify-center">
-                  <span className="text-base sm:text-lg font-heading font-semibold text-primary">
-                    {testimonial.name.charAt(0)}
-                  </span>
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-3">
+                  <img 
+                    src={testimonial.avatar} 
+                    alt={testimonial.name}
+                    className="w-10 h-10 sm:w-12 sm:h-12 rounded-full object-cover border-2 border-primary/20"
+                  />
+                  <div>
+                    <p className="font-semibold text-foreground text-sm sm:text-base">{testimonial.name}</p>
+                    <p className="text-xs sm:text-sm text-muted-foreground">{testimonial.location}</p>
+                  </div>
                 </div>
-                <div>
-                  <p className="font-semibold text-foreground text-sm sm:text-base">{testimonial.name}</p>
-                  <p className="text-xs sm:text-sm text-muted-foreground">{testimonial.location}</p>
+                
+                {/* Verified Badge */}
+                <div className="flex items-center gap-1 px-2 py-1 rounded-full bg-christmas-green/10 text-christmas-green">
+                  <BadgeCheck className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+                  <span className="text-xs font-medium hidden sm:inline">Preverjen nakup</span>
                 </div>
               </div>
             </div>
