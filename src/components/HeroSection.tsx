@@ -17,7 +17,7 @@ const HeroSection = () => {
     >
       {/* Background Image */}
       <div
-        className="absolute inset-0 bg-[length:auto_100%] sm:bg-cover bg-[center_top] md:bg-center bg-no-repeat"
+        className="absolute inset-0 bg-contain sm:bg-cover bg-top sm:bg-center bg-no-repeat bg-wood-dark"
         style={{ backgroundImage: `url(${lineupImage})` }}
       />
       
