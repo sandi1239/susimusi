@@ -52,9 +52,14 @@ const Navigation = () => {
             <img 
               src={logoImage} 
               alt="Šuši Muši logo" 
-              className={`transition-all duration-300 ${
-                isScrolled ? "w-10 h-10 md:w-11 md:h-11" : "w-11 h-11 md:w-12 md:h-12"
-              } object-contain drop-shadow-md`}
+              className={`transition-all duration-300 object-contain ${
+                isScrolled 
+                  ? "w-9 h-9 md:w-10 md:h-10" 
+                  : "w-10 h-10 md:w-11 md:h-11"
+              }`}
+              style={{ 
+                filter: isScrolled ? 'none' : 'drop-shadow(0 2px 4px rgba(0,0,0,0.3))'
+              }}
             />
             <span className={`font-heading font-bold transition-all duration-300 ${
               isScrolled ? "text-lg md:text-xl text-primary" : "text-xl md:text-2xl text-cream"
