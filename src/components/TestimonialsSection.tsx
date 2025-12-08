@@ -30,7 +30,7 @@ const testimonials = [
     name: "Janez B.",
     location: "Celje",
     rating: 5,
-    text: "Iskal sem unikaten dar za ženo in našel Šuši Muši. Leseni snežaki so sedaj naš najljubši del praznične dekoracije. Hvala za čudovit izdelek!",
+    text: "Iskal sem unikaten dar za ženo in našel ŠUŠI MUŠI. Leseni snežaki so sedaj naš najljubši del praznične dekoracije. Hvala za čudovit izdelek!",
     avatar: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=100&h=100&fit=crop&crop=face&q=30",
   },
 ];

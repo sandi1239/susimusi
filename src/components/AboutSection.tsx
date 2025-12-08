@@ -46,7 +46,7 @@ const AboutSection = () => {
             </span>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-bold text-foreground mb-4 sm:mb-6">
               Kdo stoji za{" "}
-              <span className="text-primary">Šuši Muši</span>?
+              <span className="text-primary">ŠUŠI MUŠI</span>?
             </h2>
             <p className="text-base sm:text-lg text-muted-foreground mb-4 sm:mb-6 leading-relaxed">
               Sem <strong>Jerneja Lainšček</strong> iz majhne vasice Budinci v srcu Prekmurja. 

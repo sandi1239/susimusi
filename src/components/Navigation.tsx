@@ -64,7 +64,7 @@ const Navigation = () => {
             <span className={`font-heading font-bold transition-all duration-300 ${
               isScrolled ? "text-lg md:text-xl text-primary" : "text-xl md:text-2xl text-cream"
             }`}>
-              Šuši Muši
+              ŠUŠI MUŠI
             </span>
           </a>
 
