@@ -19,7 +19,7 @@ const ClosingSection = () => {
       />
       
       {/* Overlay */}
-      <div className="absolute inset-0 bg-wood-dark/85" />
+      <div className="absolute inset-0 bg-wood-dark/65" />
 
       <div className="container-custom px-4 relative z-10">
         <div className="max-w-3xl mx-auto text-center">
