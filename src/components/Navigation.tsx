@@ -49,18 +49,15 @@ const Navigation = () => {
             }}
             className="flex items-center gap-2 md:gap-3 transition-transform hover:scale-105"
           >
-            <div className={`transition-all duration-300 ${
+            <img 
+              src={logoImage} 
+              alt="Šuši Muši logo" 
+              className={`transition-all duration-300 ${
                 isScrolled ? "w-10 h-10 md:w-11 md:h-11" : "w-11 h-11 md:w-12 md:h-12"
-              } rounded-full overflow-hidden bg-background shadow-warm`}>
-              <img 
-                src={logoImage} 
-                alt="Šuši Muši logo" 
-                className="w-full h-full object-cover"
-                style={{ filter: 'drop-shadow(0 0 0 transparent)' }}
-              />
-            </div>
-            <span className={`font-heading font-bold text-primary transition-all duration-300 ${
-              isScrolled ? "text-lg md:text-xl" : "text-xl md:text-2xl"
+              } object-contain drop-shadow-md`}
+            />
+            <span className={`font-heading font-bold transition-all duration-300 ${
+              isScrolled ? "text-lg md:text-xl text-primary" : "text-xl md:text-2xl text-cream"
             }`}>
               Šuši Muši
             </span>
@@ -76,7 +73,11 @@ const Navigation = () => {
                   e.preventDefault();
                   scrollToSection(link.href);
                 }}
-                className="text-foreground/80 hover:text-primary font-medium transition-colors duration-300 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary after:transition-all after:duration-300 hover:after:w-full text-sm xl:text-base"
+                className={`font-medium transition-colors duration-300 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-current after:transition-all after:duration-300 hover:after:w-full text-sm xl:text-base ${
+                  isScrolled 
+                    ? "text-foreground/80 hover:text-primary" 
+                    : "text-cream/90 hover:text-cream"
+                }`}
               >
                 {link.label}
               </a>
@@ -87,7 +88,7 @@ const Navigation = () => {
           <Button
             variant="ghost"
             size="icon"
-            className="lg:hidden"
+            className={`lg:hidden ${isScrolled ? "text-foreground" : "text-cream"}`}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label={isMobileMenuOpen ? "Zapri meni" : "Odpri meni"}
           >
