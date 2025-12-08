@@ -25,7 +25,7 @@ const AboutSection = () => {
       <div className="container-custom">
         <div className="grid lg:grid-cols-2 gap-8 md:gap-12 lg:gap-20 items-center">
           {/* Image */}
-          <div className="relative animate-slide-in-left opacity-0 order-2 lg:order-1 hidden lg:block" style={{ animationDelay: '0.2s', animationFillMode: 'forwards' }}>
+          <div className="relative animate-slide-in-left opacity-0 order-2 lg:order-1 hidden lg:block max-w-sm" style={{ animationDelay: '0.2s', animationFillMode: 'forwards' }}>
             <div className="relative rounded-2xl overflow-hidden shadow-warm-lg h-[350px] w-full">
               <img
                 src={logSnowmenImage}
