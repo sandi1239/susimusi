@@ -4,6 +4,7 @@ import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
 import { useToast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
 import { z } from "zod";
 
 const contactSchema = z.object({
@@ -53,22 +54,50 @@ const ContactSection = () => {
 
     setIsSubmitting(true);
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1500));
+    try {
+      const { data, error } = await supabase.functions.invoke('send-contact-email', {
+        body: {
+          firstName: result.data.firstName,
+          lastName: result.data.lastName,
+          phone: result.data.phone,
+          email: result.data.email,
+          message: result.data.message,
+        },
+      });
 
-    toast({
-      title: "Sporočilo poslano!",
-      description: "Hvala za vaše povpraševanje. Odgovorili vam bomo v najkrajšem možnem času.",
-    });
+      if (error) {
+        console.error('Error sending email:', error);
+        toast({
+          title: "Napaka",
+          description: "Prišlo je do napake pri pošiljanju. Prosim poskusite znova.",
+          variant: "destructive",
+        });
+        setIsSubmitting(false);
+        return;
+      }
 
-    setFormData({
-      firstName: "",
-      lastName: "",
-      phone: "",
-      email: "",
-      message: "",
-    });
-    setIsSubmitting(false);
+      toast({
+        title: "Sporočilo poslano!",
+        description: "Hvala za vaše povpraševanje. Odgovorili vam bomo v najkrajšem možnem času.",
+      });
+
+      setFormData({
+        firstName: "",
+        lastName: "",
+        phone: "",
+        email: "",
+        message: "",
+      });
+    } catch (error) {
+      console.error('Error:', error);
+      toast({
+        title: "Napaka",
+        description: "Prišlo je do napake pri pošiljanju. Prosim poskusite znova.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
