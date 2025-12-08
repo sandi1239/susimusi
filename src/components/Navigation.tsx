@@ -78,10 +78,10 @@ const Navigation = () => {
                   e.preventDefault();
                   scrollToSection(link.href);
                 }}
-                className={`font-medium transition-colors duration-300 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-current after:transition-all after:duration-300 hover:after:w-full text-sm xl:text-base ${
+                className={`font-bold transition-colors duration-300 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-current after:transition-all after:duration-300 hover:after:w-full text-sm xl:text-base ${
                   isScrolled 
                     ? "text-foreground/80 hover:text-primary" 
-                    : "text-cream/90 hover:text-cream"
+                    : "text-cream hover:text-cream drop-shadow-md"
                 }`}
               >
                 {link.label}
@@ -116,7 +116,7 @@ const Navigation = () => {
                   e.preventDefault();
                   scrollToSection(link.href);
                 }}
-                className="text-foreground/80 hover:text-primary font-medium transition-colors duration-300 py-3 px-4 rounded-lg hover:bg-primary/5"
+                className="text-foreground/80 hover:text-primary font-bold transition-colors duration-300 py-3 px-4 rounded-lg hover:bg-primary/5"
               >
                 {link.label}
               </a>
