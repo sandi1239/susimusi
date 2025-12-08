@@ -40,11 +40,11 @@ const HeroSection = () => {
           Šuši Muši
         </h1>
         
-        <p className="animate-fade-up delay-200 text-lg sm:text-xl md:text-2xl text-cream/90 mb-3 sm:mb-4 font-light">
+        <p className="animate-fade-up delay-200 text-lg sm:text-xl md:text-2xl text-cream mb-3 sm:mb-4 font-semibold drop-shadow-md">
           Lesena čarovnija iz srca Prekmurja
         </p>
         
-        <p className="animate-fade-up delay-300 text-base sm:text-lg md:text-xl text-cream/70 mb-8 sm:mb-10 max-w-2xl mx-auto px-2">
+        <p className="animate-fade-up delay-300 text-base sm:text-lg md:text-xl text-cream/90 mb-8 sm:mb-10 max-w-2xl mx-auto px-2 font-medium drop-shadow-sm">
           Vsak kos je zgodba. Vsak izdelek je unikaten. 
           Ročno izdelane lesene dekoracije, ki vašemu domu dodajo toplino in prazničen čar.
         </p>
