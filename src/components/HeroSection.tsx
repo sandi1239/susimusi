@@ -1,6 +1,7 @@
 import { ChevronDown } from "lucide-react";
 import { Button } from "./ui/button";
 import lineupImage from "@/assets/lineup.jpg";
+import collageBg from "@/assets/collage-bg.jpg";
 
 const HeroSection = () => {
   const scrollToSection = (href: string) => {
@@ -15,9 +16,14 @@ const HeroSection = () => {
       id="domov"
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
     >
-      {/* Background Image */}
+      {/* Background Image - Mobile */}
       <div
-        className="absolute inset-0 bg-contain sm:bg-cover bg-top sm:bg-center bg-no-repeat bg-wood-dark"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat sm:hidden"
+        style={{ backgroundImage: `url(${collageBg})` }}
+      />
+      {/* Background Image - Desktop */}
+      <div
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat hidden sm:block"
         style={{ backgroundImage: `url(${lineupImage})` }}
       />
       
