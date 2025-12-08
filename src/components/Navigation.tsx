@@ -53,8 +53,8 @@ const Navigation = () => {
               src={logoImage} 
               alt="Šuši Muši logo" 
               className={`transition-all duration-300 ${
-                isScrolled ? "w-10 h-10 md:w-12 md:h-12" : "w-12 h-12 md:w-14 md:h-14"
-              } rounded-full shadow-warm object-cover`}
+                isScrolled ? "w-8 h-8 md:w-9 md:h-9" : "w-9 h-9 md:w-10 md:h-10"
+              } object-contain`}
             />
             <span className={`font-heading font-bold text-primary transition-all duration-300 ${
               isScrolled ? "text-lg md:text-xl" : "text-xl md:text-2xl"
