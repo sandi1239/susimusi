@@ -10,7 +10,7 @@ const ClosingSection = () => {
   };
 
   return (
-    <section className="relative py-20 md:py-32 overflow-hidden bg-wood-medium">
+    <section className="relative py-16 sm:py-20 md:py-32 overflow-hidden bg-wood-medium">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0" style={{
@@ -20,15 +20,15 @@ const ClosingSection = () => {
 
       <div className="container-custom px-4 relative z-10">
         <div className="max-w-3xl mx-auto text-center">
-          <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-cream/20 mb-6 animate-float">
-            <Heart className="w-8 h-8 text-cream fill-cream/50" />
+          <div className="inline-flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-cream/20 mb-4 sm:mb-6 animate-float">
+            <Heart className="w-6 h-6 sm:w-8 sm:h-8 text-cream fill-cream/50" />
           </div>
           
-          <h2 className="text-3xl md:text-5xl font-heading font-bold text-cream mb-6">
+          <h2 className="text-2xl sm:text-3xl md:text-5xl font-heading font-bold text-cream mb-4 sm:mb-6 px-2">
             Naj vaš dom zadiši po lesu in toplini
           </h2>
           
-          <p className="text-lg md:text-xl text-cream/80 mb-10 leading-relaxed">
+          <p className="text-base sm:text-lg md:text-xl text-cream/80 mb-8 sm:mb-10 leading-relaxed px-4">
             Vsak kos lesa ima svojo zgodbo. Dovolite mi, da jo preoblikujem 
             v unikaten izdelek, ki bo krasil vaš dom še leta in leta.
           </p>
@@ -36,7 +36,7 @@ const ClosingSection = () => {
           <Button
             variant="hero"
             onClick={scrollToContact}
-            className="bg-cream text-wood-dark hover:bg-cream/90"
+            className="bg-cream text-wood-dark hover:bg-cream/90 w-full sm:w-auto"
           >
             Začnite svojo zgodbo
           </Button>

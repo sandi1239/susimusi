@@ -68,25 +68,25 @@ const GallerySection = () => {
     <section id="izdelki" className="section-padding bg-muted/30">
       <div className="container-custom">
         {/* Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-10 md:mb-16">
           <span className="inline-block px-4 py-1 mb-4 text-sm font-medium text-christmas-red bg-christmas-red/10 rounded-full">
             Naši izdelki
           </span>
-          <h2 className="text-4xl md:text-5xl font-heading font-bold text-foreground mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-bold text-foreground mb-3 sm:mb-4">
             Galerija <span className="text-primary">unikatov</span>
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto px-4">
             Vsak izdelek je ročno izdelan in unikaten. Oglejte si nekaj naših 
             najljubših kreacij, ki so že polepšale domove po vsej Sloveniji.
           </p>
         </div>
 
         {/* Gallery Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-6">
           {products.map((product, index) => (
             <div
               key={product.id}
-              className="group relative rounded-2xl overflow-hidden cursor-pointer shadow-warm hover:shadow-warm-lg transition-all duration-500 animate-scale-in opacity-0"
+              className="group relative rounded-xl sm:rounded-2xl overflow-hidden cursor-pointer shadow-warm hover:shadow-warm-lg transition-all duration-500 animate-scale-in opacity-0"
               style={{ 
                 animationDelay: `${index * 0.1}s`,
                 animationFillMode: 'forwards'
@@ -98,16 +98,17 @@ const GallerySection = () => {
                   src={product.image}
                   alt={product.title}
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  loading="lazy"
                 />
               </div>
               
               {/* Overlay */}
               <div className="absolute inset-0 bg-gradient-to-t from-wood-dark/90 via-wood-dark/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                <div className="absolute bottom-0 left-0 right-0 p-5 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                  <h3 className="text-lg font-heading font-semibold text-cream mb-1">
+                <div className="absolute bottom-0 left-0 right-0 p-3 sm:p-4 md:p-5 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                  <h3 className="text-sm sm:text-base md:text-lg font-heading font-semibold text-cream mb-0.5 sm:mb-1">
                     {product.title}
                   </h3>
-                  <p className="text-sm text-cream/80">
+                  <p className="text-xs sm:text-sm text-cream/80 hidden sm:block">
                     {product.description}
                   </p>
                 </div>
@@ -117,8 +118,8 @@ const GallerySection = () => {
         </div>
 
         {/* CTA */}
-        <div className="text-center mt-12">
-          <p className="text-muted-foreground mb-4">
+        <div className="text-center mt-8 md:mt-12">
+          <p className="text-muted-foreground mb-3 sm:mb-4 text-sm sm:text-base">
             Želite unikaten izdelek po vaših željah?
           </p>
           <a
@@ -137,10 +138,11 @@ const GallerySection = () => {
           onClick={() => setSelectedImage(null)}
         >
           <button
-            className="absolute top-6 right-6 text-cream hover:text-primary transition-colors"
+            className="absolute top-4 right-4 sm:top-6 sm:right-6 text-cream hover:text-primary transition-colors z-10"
             onClick={() => setSelectedImage(null)}
+            aria-label="Zapri"
           >
-            <X className="w-8 h-8" />
+            <X className="w-6 h-6 sm:w-8 sm:h-8" />
           </button>
           
           <div
@@ -150,13 +152,13 @@ const GallerySection = () => {
             <img
               src={selectedImage.image}
               alt={selectedImage.title}
-              className="max-w-full max-h-[80vh] object-contain rounded-lg shadow-warm-lg"
+              className="max-w-full max-h-[75vh] sm:max-h-[80vh] object-contain rounded-lg shadow-warm-lg"
             />
-            <div className="mt-4 text-center">
-              <h3 className="text-xl font-heading font-semibold text-cream">
+            <div className="mt-3 sm:mt-4 text-center">
+              <h3 className="text-lg sm:text-xl font-heading font-semibold text-cream">
                 {selectedImage.title}
               </h3>
-              <p className="text-cream/70">{selectedImage.description}</p>
+              <p className="text-cream/70 text-sm sm:text-base">{selectedImage.description}</p>
             </div>
           </div>
         </div>
