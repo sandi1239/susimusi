@@ -18,7 +18,7 @@ const HeroSection = () => {
     >
       {/* Background Image - Mobile */}
       <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat sm:hidden"
+        className="absolute inset-0 bg-cover bg-[center_top_30%] bg-no-repeat sm:hidden"
         style={{ backgroundImage: `url(${collageBg})` }}
       />
       {/* Background Image - Desktop */}
