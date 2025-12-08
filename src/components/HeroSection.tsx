@@ -37,7 +37,7 @@ const HeroSection = () => {
         </div>
         
         <h1 className="animate-fade-up delay-100 text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-heading font-bold text-cream mb-4 sm:mb-6 text-shadow">
-          Šuši Muši
+          ŠUŠI MUŠI
         </h1>
         
         <p className="animate-fade-up delay-200 text-lg sm:text-xl md:text-2xl text-cream mb-3 sm:mb-4 font-semibold drop-shadow-md">
