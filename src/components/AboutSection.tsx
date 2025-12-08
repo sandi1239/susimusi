@@ -26,11 +26,11 @@ const AboutSection = () => {
         <div className="grid lg:grid-cols-2 gap-8 md:gap-12 lg:gap-20 items-center">
           {/* Image */}
           <div className="relative animate-slide-in-left opacity-0 order-2 lg:order-1 hidden lg:block max-w-sm" style={{ animationDelay: '0.2s', animationFillMode: 'forwards' }}>
-            <div className="relative rounded-2xl overflow-hidden shadow-warm-lg h-[350px] w-full">
+            <div className="relative rounded-2xl overflow-hidden shadow-warm-lg">
               <img
                 src={logSnowmenImage}
                 alt="Jerneja Lainšček z družino in lesenimi izdelki"
-                className="w-full h-full object-cover object-left"
+                className="w-full h-auto"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-wood-dark/40 to-transparent" />
             </div>
