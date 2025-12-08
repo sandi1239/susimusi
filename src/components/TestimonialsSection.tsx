@@ -7,7 +7,7 @@ const testimonials = [
     location: "Ljubljana",
     rating: 5,
     text: "Naročila sem lesene škratke za pred vhod in so absolutno čudoviti! Vsi sosedje sprašujejo, kje sem jih dobila. Jerneja je res umetnica!",
-    avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&h=100&fit=crop&crop=face&q=40",
+    avatar: "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=100&h=100&fit=crop&crop=face&q=30",
   },
   {
     id: 2,
@@ -15,7 +15,7 @@ const testimonials = [
     location: "Maribor",
     rating: 5,
     text: "Za hčerkin rojstni dan smo naročili personalizirano tablo. Izdelek je presegel vsa pričakovanja - tako lep in kvaliteten. Toplo priporočamo!",
-    avatar: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=100&h=100&fit=crop&crop=face&q=40",
+    avatar: "https://images.unsplash.com/photo-1552058544-f2b08422138a?w=100&h=100&fit=crop&crop=face&q=30",
   },
   {
     id: 3,
@@ -23,7 +23,7 @@ const testimonials = [
     location: "Murska Sobota",
     rating: 5,
     text: "Že drugo leto zapored naročam božične dekoracije pri Jerneji. Vedno me preseneti z novimi idejami in izjemno kakovostjo. Najboljša izbira!",
-    avatar: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=100&h=100&fit=crop&crop=face&q=40",
+    avatar: "https://images.unsplash.com/photo-1542596768-5d1d21f1cf98?w=100&h=100&fit=crop&crop=face&q=30",
   },
   {
     id: 4,
@@ -31,7 +31,7 @@ const testimonials = [
     location: "Celje",
     rating: 5,
     text: "Iskal sem unikaten dar za ženo in našel Šuši Muši. Leseni snežaki so sedaj naš najljubši del praznične dekoracije. Hvala za čudovit izdelek!",
-    avatar: "https://images.unsplash.com/photo-1507591064344-4c6ce005b128?w=100&h=100&fit=crop&crop=face&q=40",
+    avatar: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=100&h=100&fit=crop&crop=face&q=30",
   },
 ];
 

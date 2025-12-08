@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Send, Mail, MapPin } from "lucide-react";
+import { Send, Mail, MapPin, Phone } from "lucide-react";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
@@ -100,6 +100,21 @@ const ContactSection = () => {
                     className="text-muted-foreground hover:text-primary transition-colors text-sm sm:text-base break-all"
                   >
                     jerneja@susimusi.si
+                  </a>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-3 sm:gap-4">
+                <div className="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-primary/10 flex items-center justify-center">
+                  <Phone className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-foreground mb-1 text-sm sm:text-base">Telefon</h3>
+                  <a
+                    href="tel:+38631747893"
+                    className="text-muted-foreground hover:text-primary transition-colors text-sm sm:text-base"
+                  >
+                    031-747-893
                   </a>
                 </div>
               </div>
