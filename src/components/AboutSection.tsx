@@ -65,7 +65,7 @@ const AboutSection = () => {
                 <img
                   src={logSnowmenImage}
                   alt="Leseni izdelki ŠUŠI MUŠI"
-                  className="w-full h-48 sm:h-56 object-cover"
+                  className="w-full h-auto"
                 />
               </div>
               {/* Decorative Frame */}
