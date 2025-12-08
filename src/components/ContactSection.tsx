@@ -126,7 +126,7 @@ const ContactSection = () => {
                 <div>
                   <h3 className="font-semibold text-foreground mb-1 text-sm sm:text-base">Lokacija</h3>
                   <p className="text-muted-foreground text-sm sm:text-base">
-                    Budinci, Prekmurje, Slovenija
+                    Dolenci, Prekmurje, Slovenija
                   </p>
                 </div>
               </div>
