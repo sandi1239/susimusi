@@ -1,4 +1,5 @@
 import { Heart, Mail, MapPin, Facebook, Instagram } from "lucide-react";
+import logoImage from "@/assets/logo.png";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -6,11 +7,18 @@ const Footer = () => {
   return (
     <footer className="bg-wood-dark text-cream">
       <div className="container-custom section-padding pb-8">
-        <div className="grid md:grid-cols-3 gap-12 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12 mb-12">
           {/* Brand */}
-          <div>
-            <h3 className="text-2xl font-heading font-bold mb-4">Šuši Muši</h3>
-            <p className="text-cream/70 mb-6 leading-relaxed">
+          <div className="sm:col-span-2 lg:col-span-1">
+            <div className="flex items-center gap-3 mb-4">
+              <img 
+                src={logoImage} 
+                alt="Šuši Muši logo" 
+                className="w-14 h-14 rounded-full shadow-warm object-cover"
+              />
+              <h3 className="text-2xl font-heading font-bold">Šuši Muši</h3>
+            </div>
+            <p className="text-cream/70 mb-6 leading-relaxed text-sm md:text-base">
               Unikatni ročni izdelki iz lesa, ki vašemu domu dodajo 
               toplino in prazničen čar.
             </p>
@@ -35,7 +43,7 @@ const Footer = () => {
           {/* Quick Links */}
           <div>
             <h4 className="text-lg font-heading font-semibold mb-4">Hitre povezave</h4>
-            <nav className="space-y-3">
+            <nav className="grid grid-cols-2 sm:grid-cols-1 gap-2 sm:gap-3">
               {[
                 { href: "#domov", label: "Domov" },
                 { href: "#o-nas", label: "O nas" },
@@ -46,7 +54,7 @@ const Footer = () => {
                 <a
                   key={link.href}
                   href={link.href}
-                  className="block text-cream/70 hover:text-cream transition-colors"
+                  className="text-cream/70 hover:text-cream transition-colors text-sm md:text-base"
                 >
                   {link.label}
                 </a>
@@ -59,17 +67,17 @@ const Footer = () => {
             <h4 className="text-lg font-heading font-semibold mb-4">Kontakt</h4>
             <div className="space-y-4">
               <div className="flex items-start gap-3">
-                <Mail className="w-5 h-5 mt-0.5 text-cream/50" />
+                <Mail className="w-5 h-5 mt-0.5 text-cream/50 flex-shrink-0" />
                 <a
                   href="mailto:jerneja@susimusi.si"
-                  className="text-cream/70 hover:text-cream transition-colors"
+                  className="text-cream/70 hover:text-cream transition-colors text-sm md:text-base break-all"
                 >
                   jerneja@susimusi.si
                 </a>
               </div>
               <div className="flex items-start gap-3">
-                <MapPin className="w-5 h-5 mt-0.5 text-cream/50" />
-                <span className="text-cream/70">
+                <MapPin className="w-5 h-5 mt-0.5 text-cream/50 flex-shrink-0" />
+                <span className="text-cream/70 text-sm md:text-base">
                   Budinci, Prekmurje<br />
                   Slovenija
                 </span>
@@ -80,7 +88,7 @@ const Footer = () => {
 
         {/* Bottom */}
         <div className="pt-8 border-t border-cream/10">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-cream/50">
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs sm:text-sm text-cream/50">
             <p>
               © {currentYear} Šuši Muši. Vse pravice pridržane.
             </p>

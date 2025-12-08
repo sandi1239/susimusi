@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Send, Phone, Mail, MapPin } from "lucide-react";
+import { Send, Mail, MapPin } from "lucide-react";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
@@ -74,43 +74,43 @@ const ContactSection = () => {
   return (
     <section id="kontakt" className="section-padding bg-background">
       <div className="container-custom">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20">
+        <div className="grid lg:grid-cols-2 gap-8 md:gap-12 lg:gap-20">
           {/* Contact Info */}
           <div>
             <span className="inline-block px-4 py-1 mb-4 text-sm font-medium text-christmas-green bg-christmas-green/10 rounded-full">
               Kontakt
             </span>
-            <h2 className="text-4xl md:text-5xl font-heading font-bold text-foreground mb-6">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-bold text-foreground mb-4 sm:mb-6">
               Naročite svoj <span className="text-primary">unikat</span>
             </h2>
-            <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
+            <p className="text-base sm:text-lg text-muted-foreground mb-6 sm:mb-8 leading-relaxed">
               Imate idejo za poseben izdelek? Želite naročiti darilo za bližnje? 
               Pošljite mi sporočilo in skupaj bova ustvarila nekaj čarobnega.
             </p>
 
-            <div className="space-y-6">
-              <div className="flex items-start gap-4">
-                <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
-                  <Mail className="w-5 h-5 text-primary" />
+            <div className="space-y-4 sm:space-y-6">
+              <div className="flex items-start gap-3 sm:gap-4">
+                <div className="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-primary/10 flex items-center justify-center">
+                  <Mail className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-foreground mb-1">E-pošta</h3>
+                  <h3 className="font-semibold text-foreground mb-1 text-sm sm:text-base">E-pošta</h3>
                   <a
                     href="mailto:jerneja@susimusi.si"
-                    className="text-muted-foreground hover:text-primary transition-colors"
+                    className="text-muted-foreground hover:text-primary transition-colors text-sm sm:text-base break-all"
                   >
                     jerneja@susimusi.si
                   </a>
                 </div>
               </div>
 
-              <div className="flex items-start gap-4">
-                <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
-                  <MapPin className="w-5 h-5 text-primary" />
+              <div className="flex items-start gap-3 sm:gap-4">
+                <div className="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-primary/10 flex items-center justify-center">
+                  <MapPin className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-foreground mb-1">Lokacija</h3>
-                  <p className="text-muted-foreground">
+                  <h3 className="font-semibold text-foreground mb-1 text-sm sm:text-base">Lokacija</h3>
+                  <p className="text-muted-foreground text-sm sm:text-base">
                     Budinci, Prekmurje, Slovenija
                   </p>
                 </div>
@@ -119,8 +119,8 @@ const ContactSection = () => {
           </div>
 
           {/* Contact Form */}
-          <div className="glass-card rounded-2xl p-6 md:p-8">
-            <form onSubmit={handleSubmit} className="space-y-5">
+          <div className="glass-card rounded-2xl p-5 sm:p-6 md:p-8">
+            <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-5">
               <div className="grid sm:grid-cols-2 gap-4">
                 <div>
                   <label htmlFor="firstName" className="block text-sm font-medium text-foreground mb-2">
@@ -135,7 +135,7 @@ const ContactSection = () => {
                     className={errors.firstName ? "border-destructive" : ""}
                   />
                   {errors.firstName && (
-                    <p className="mt-1 text-sm text-destructive">{errors.firstName}</p>
+                    <p className="mt-1 text-xs sm:text-sm text-destructive">{errors.firstName}</p>
                   )}
                 </div>
                 <div>
@@ -151,7 +151,7 @@ const ContactSection = () => {
                     className={errors.lastName ? "border-destructive" : ""}
                   />
                   {errors.lastName && (
-                    <p className="mt-1 text-sm text-destructive">{errors.lastName}</p>
+                    <p className="mt-1 text-xs sm:text-sm text-destructive">{errors.lastName}</p>
                   )}
                 </div>
               </div>
@@ -170,7 +170,7 @@ const ContactSection = () => {
                   className={errors.phone ? "border-destructive" : ""}
                 />
                 {errors.phone && (
-                  <p className="mt-1 text-sm text-destructive">{errors.phone}</p>
+                  <p className="mt-1 text-xs sm:text-sm text-destructive">{errors.phone}</p>
                 )}
               </div>
 
@@ -188,7 +188,7 @@ const ContactSection = () => {
                   className={errors.email ? "border-destructive" : ""}
                 />
                 {errors.email && (
-                  <p className="mt-1 text-sm text-destructive">{errors.email}</p>
+                  <p className="mt-1 text-xs sm:text-sm text-destructive">{errors.email}</p>
                 )}
               </div>
 
@@ -202,11 +202,11 @@ const ContactSection = () => {
                   value={formData.message}
                   onChange={handleChange}
                   placeholder="Opišite, kakšen izdelek si želite..."
-                  rows={5}
+                  rows={4}
                   className={errors.message ? "border-destructive" : ""}
                 />
                 {errors.message && (
-                  <p className="mt-1 text-sm text-destructive">{errors.message}</p>
+                  <p className="mt-1 text-xs sm:text-sm text-destructive">{errors.message}</p>
                 )}
               </div>
 
