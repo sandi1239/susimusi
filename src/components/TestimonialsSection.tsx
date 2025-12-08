@@ -4,7 +4,7 @@ const testimonials = [
   {
     id: 1,
     name: "Marija K.",
-    location: "Ljubljana",
+    location: "Križevci",
     rating: 5,
     text: "Naročila sem lesene škratke za pred vhod in so absolutno čudoviti! Vsi sosedje sprašujejo, kje sem jih dobila. Jerneja je res umetnica!",
     avatar: "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=100&h=100&fit=crop&crop=face&q=30",
@@ -12,7 +12,7 @@ const testimonials = [
   {
     id: 2,
     name: "Peter in Ana",
-    location: "Maribor",
+    location: "Stanjevci",
     rating: 5,
     text: "Za hčerkin rojstni dan smo naročili personalizirano tablo. Izdelek je presegel vsa pričakovanja - tako lep in kvaliteten. Toplo priporočamo!",
     avatar: "https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=100&h=100&fit=crop&crop=face&q=30",
@@ -20,7 +20,7 @@ const testimonials = [
   {
     id: 3,
     name: "Tanja M.",
-    location: "Murska Sobota",
+    location: "Moravske Toplice",
     rating: 5,
     text: "Že drugo leto zapored naročam božične dekoracije pri Jerneji. Vedno me preseneti z novimi idejami in izjemno kakovostjo. Najboljša izbira!",
     avatar: "https://images.unsplash.com/photo-1542596768-5d1d21f1cf98?w=100&h=100&fit=crop&crop=face&q=30",
@@ -28,7 +28,7 @@ const testimonials = [
   {
     id: 4,
     name: "Janez B.",
-    location: "Celje",
+    location: "Šalamenci",
     rating: 5,
     text: "Iskal sem unikaten dar za ženo in našel ŠUŠI MUŠI. Leseni snežaki so sedaj naš najljubši del praznične dekoracije. Hvala za čudovit izdelek!",
     avatar: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=100&h=100&fit=crop&crop=face&q=30",
