@@ -7,6 +7,7 @@ import ContactSection from "@/components/ContactSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import ClosingSection from "@/components/ClosingSection";
 import Footer from "@/components/Footer";
+import Snowflakes from "@/components/Snowflakes";
 
 const Index = () => {
   useEffect(() => {
@@ -33,6 +34,7 @@ const Index = () => {
 
   return (
     <main className="min-h-screen">
+      <Snowflakes />
       <Navigation />
       <HeroSection />
       <AboutSection />

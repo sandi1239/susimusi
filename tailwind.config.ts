@@ -87,10 +87,27 @@ export default {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+        snowfall: {
+          "0%": { 
+            transform: "translateY(-10px) translateX(0)",
+            opacity: "0"
+          },
+          "10%": {
+            opacity: "1"
+          },
+          "90%": {
+            opacity: "1"
+          },
+          "100%": { 
+            transform: "translateY(100vh) translateX(20px)",
+            opacity: "0"
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        snowfall: "snowfall linear infinite",
       },
       boxShadow: {
         'warm': '0 10px 40px -10px hsl(var(--wood-medium) / 0.3)',
