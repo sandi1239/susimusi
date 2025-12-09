@@ -1,7 +1,4 @@
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
-import { Resend } from "https://esm.sh/resend@2.0.0";
-
-const resend = new Resend(Deno.env.get("RESEND_API_KEY"));
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
@@ -27,24 +24,37 @@ const handler = async (req: Request): Promise<Response> => {
 
     console.log("Received contact form submission:", { firstName, lastName, phone, email });
 
-    // Send email to business owner
-    const emailResponse = await resend.emails.send({
-      from: "ŠUŠI MUŠI <onboarding@resend.dev>",
-      to: ["jerneja@susimusi.si"],
-      subject: `Novo povpraševanje od ${firstName} ${lastName}`,
-      html: `
-        <h1>Novo povpraševanje s spletne strani</h1>
-        <p><strong>Ime in priimek:</strong> ${firstName} ${lastName}</p>
-        <p><strong>Telefon:</strong> ${phone}</p>
-        <p><strong>E-pošta:</strong> ${email}</p>
-        <p><strong>Sporočilo:</strong></p>
-        <p>${message.replace(/\n/g, '<br>')}</p>
-        <hr>
-        <p style="color: #666; font-size: 12px;">To sporočilo je bilo poslano prek kontaktnega obrazca na spletni strani susimusi.si</p>
-      `,
+    const web3formsKey = Deno.env.get("WEB3FORMS_ACCESS_KEY");
+    
+    if (!web3formsKey) {
+      throw new Error("WEB3FORMS_ACCESS_KEY not configured");
+    }
+
+    // Send email using Web3Forms
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        access_key: web3formsKey,
+        subject: `Novo povpraševanje od ${firstName} ${lastName}`,
+        from_name: `${firstName} ${lastName}`,
+        to: "jerneja@susimusi.si",
+        name: `${firstName} ${lastName}`,
+        email: email,
+        phone: phone,
+        message: message,
+        botcheck: false,
+      }),
     });
 
-    console.log("Email sent successfully:", emailResponse);
+    const result = await response.json();
+    console.log("Web3Forms response:", result);
+
+    if (!result.success) {
+      throw new Error(result.message || "Failed to send email");
+    }
 
     return new Response(JSON.stringify({ success: true }), {
       status: 200,
