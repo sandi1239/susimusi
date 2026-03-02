@@ -88,19 +88,19 @@ export default {
           to: { height: "0" },
         },
         "sunbeam-1": {
-          "0%": { transform: "rotate(0deg) scale(1)", opacity: "0.15" },
-          "50%": { transform: "rotate(3deg) scale(1.1)", opacity: "0.22" },
-          "100%": { transform: "rotate(0deg) scale(1)", opacity: "0.15" },
+          "0%": { transform: "rotate(0deg) scale(1)", opacity: "0.25" },
+          "50%": { transform: "rotate(3deg) scale(1.15)", opacity: "0.35" },
+          "100%": { transform: "rotate(0deg) scale(1)", opacity: "0.25" },
         },
         "sunbeam-2": {
-          "0%": { transform: "rotate(0deg) scale(1)", opacity: "0.12" },
-          "50%": { transform: "rotate(-2deg) scale(1.05)", opacity: "0.18" },
-          "100%": { transform: "rotate(0deg) scale(1)", opacity: "0.12" },
+          "0%": { transform: "rotate(0deg) scale(1)", opacity: "0.2" },
+          "50%": { transform: "rotate(-2deg) scale(1.1)", opacity: "0.3" },
+          "100%": { transform: "rotate(0deg) scale(1)", opacity: "0.2" },
         },
         "sunbeam-3": {
-          "0%": { transform: "translateX(0) scale(1)", opacity: "0.1" },
-          "50%": { transform: "translateX(5%) scale(1.1)", opacity: "0.16" },
-          "100%": { transform: "translateX(0) scale(1)", opacity: "0.1" },
+          "0%": { transform: "translateX(0) scale(1)", opacity: "0.18" },
+          "50%": { transform: "translateX(5%) scale(1.15)", opacity: "0.26" },
+          "100%": { transform: "translateX(0) scale(1)", opacity: "0.18" },
         },
       },
       animation: {
