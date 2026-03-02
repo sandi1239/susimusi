@@ -7,6 +7,7 @@ import ContactSection from "@/components/ContactSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import ClosingSection from "@/components/ClosingSection";
 import Footer from "@/components/Footer";
+import DandelionSeeds from "@/components/DandelionSeeds";
 
 
 const Index = () => {
@@ -34,7 +35,7 @@ const Index = () => {
 
   return (
     <main className="min-h-screen">
-      
+      <DandelionSeeds />
       <Navigation />
       <HeroSection />
       <AboutSection />
