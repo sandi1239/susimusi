@@ -7,7 +7,7 @@ import ContactSection from "@/components/ContactSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import ClosingSection from "@/components/ClosingSection";
 import Footer from "@/components/Footer";
-import Sunbeams from "@/components/Sunbeams";
+
 
 const Index = () => {
   useEffect(() => {
@@ -34,7 +34,7 @@ const Index = () => {
 
   return (
     <main className="min-h-screen">
-      <Sunbeams />
+      
       <Navigation />
       <HeroSection />
       <AboutSection />
