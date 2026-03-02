@@ -1,6 +1,6 @@
 import { Button } from "./ui/button";
 import { Heart } from "lucide-react";
-import collageBg from "@/assets/collage-bg.jpg";
+import easterFullCollectionImage from "@/assets/easter-full-collection.jpg";
 
 const ClosingSection = () => {
   const scrollToContact = () => {
@@ -15,7 +15,7 @@ const ClosingSection = () => {
       {/* Background Image */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${collageBg})` }}
+        style={{ backgroundImage: `url(${easterFullCollectionImage})` }}
       />
       
       {/* Overlay */}
