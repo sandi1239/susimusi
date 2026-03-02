@@ -14,14 +14,14 @@ const DandelionSeeds = () => {
   const [seeds, setSeeds] = useState<Seed[]>([]);
 
   useEffect(() => {
-    const generated: Seed[] = Array.from({ length: 8 }, (_, i) => ({
+    const generated: Seed[] = Array.from({ length: 14 }, (_, i) => ({
       id: i,
       left: Math.random() * 100,
-      size: Math.random() * 6 + 4,
-      duration: Math.random() * 12 + 16,
-      delay: Math.random() * 15,
-      opacity: Math.random() * 0.25 + 0.1,
-      drift: (Math.random() - 0.5) * 200,
+      size: Math.random() * 7 + 5,
+      duration: Math.random() * 10 + 14,
+      delay: Math.random() * 12,
+      opacity: Math.random() * 0.3 + 0.2,
+      drift: (Math.random() - 0.5) * 250,
     }));
     setSeeds(generated);
   }, []);
