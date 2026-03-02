@@ -31,17 +31,17 @@ const DandelionSeeds = () => {
       <style>{`
         @keyframes dandelion-float {
           0% {
-            transform: translateY(100vh) translateX(0px) rotate(0deg);
+            transform: translateY(0) translateX(0px) rotate(0deg);
             opacity: 0;
           }
-          10% {
+          5% {
             opacity: var(--seed-opacity);
           }
           90% {
             opacity: var(--seed-opacity);
           }
           100% {
-            transform: translateY(-20vh) translateX(var(--seed-drift)) rotate(360deg);
+            transform: translateY(calc(-100vh - 50px)) translateX(var(--seed-drift)) rotate(360deg);
             opacity: 0;
           }
         }
@@ -49,9 +49,10 @@ const DandelionSeeds = () => {
       {seeds.map((seed) => (
         <div
           key={seed.id}
-          className="absolute"
+          className="absolute opacity-0"
           style={{
             left: `${seed.left}%`,
+            bottom: "-30px",
             animationName: "dandelion-float",
             animationDuration: `${seed.duration}s`,
             animationDelay: `${seed.delay}s`,
