@@ -1,7 +1,7 @@
 import { ChevronDown } from "lucide-react";
 import { Button } from "./ui/button";
-import lineupImage from "@/assets/lineup.jpg";
-import snowmanReindeer from "@/assets/snowman-reindeer.jpg";
+import easterLineupImage from "@/assets/easter-lineup.jpg";
+import easterFullCollectionImage from "@/assets/easter-full-collection.jpg";
 
 const HeroSection = () => {
   const scrollToSection = (href: string) => {
@@ -19,12 +19,12 @@ const HeroSection = () => {
       {/* Background Image - Mobile */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat sm:hidden"
-        style={{ backgroundImage: `url(${snowmanReindeer})` }}
+        style={{ backgroundImage: `url(${easterFullCollectionImage})` }}
       />
       {/* Background Image - Desktop */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat hidden sm:block"
-        style={{ backgroundImage: `url(${lineupImage})` }}
+        style={{ backgroundImage: `url(${easterLineupImage})` }}
       />
       
       {/* Gradient Overlay */}
