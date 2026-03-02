@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { X } from "lucide-react";
 
+// Zimska kolekcija
 import gnomesImage from "@/assets/gnomes.jpg";
 import santaSignImage from "@/assets/santa-sign.jpg";
 import snowmanReindeerImage from "@/assets/snowman-reindeer.jpg";
@@ -10,59 +11,69 @@ import ornamentsImage from "@/assets/ornaments.jpg";
 import snowmanCoupleImage from "@/assets/snowman-couple.jpg";
 import lineupImage from "@/assets/lineup.jpg";
 
-const products = [
+// Spomladanska kolekcija
+import easterLineupImage from "@/assets/easter-lineup.jpg";
+import easterBunniesBasketsImage from "@/assets/easter-bunnies-baskets.jpg";
+import easterCoupleImage from "@/assets/easter-couple.jpg";
+import easterScarvesImage from "@/assets/easter-scarves.jpg";
+import easterEggBunniesImage from "@/assets/easter-egg-bunnies.jpg";
+import easterPolkaDotImage from "@/assets/easter-polka-dot.jpg";
+import easterCoolBunniesImage from "@/assets/easter-cool-bunnies.jpg";
+import easterBunnyChickImage from "@/assets/easter-bunny-chick.jpg";
+import easterFullCollectionImage from "@/assets/easter-full-collection.jpg";
+import easterBunnyChick2Image from "@/assets/easter-bunny-chick2.jpg";
+
+type Product = {
+  id: number;
+  image: string;
+  title: string;
+  description: string;
+};
+
+type Collection = {
+  key: string;
+  label: string;
+  products: Product[];
+};
+
+const collections: Collection[] = [
   {
-    id: 1,
-    image: gnomesImage,
-    title: "Leseni škratki",
-    description: "Prikupni škratki z darili v različnih velikostih",
+    key: "spring",
+    label: "🐣 Spomladanska",
+    products: [
+      { id: 101, image: easterLineupImage, title: "Velikonočna kolekcija", description: "Vesela druščina zajčkov in piščančkov z jajčki" },
+      { id: 102, image: easterBunniesBasketsImage, title: "Zajčka s košaricama", description: "Par zajčkov s klobukom in košarico pisanih jajčk" },
+      { id: 103, image: easterCoupleImage, title: "Elegantni zajčji par", description: "Zajčka v elegantnih oblačilih z rumenim klobukom" },
+      { id: 104, image: easterScarvesImage, title: "Zajčka z jajčki", description: "Dva zajčka s košarico in pisanim jajčkom" },
+      { id: 105, image: easterEggBunniesImage, title: "Zajčka z velikim jajčkom", description: "Prikupna zajčka ob zelenem pisanem jajčku" },
+      { id: 106, image: easterPolkaDotImage, title: "Pikčasta zajčka", description: "Zajčka v pikčastih oblačilih z rumenim jajčkom" },
+      { id: 107, image: easterCoolBunniesImage, title: "Kul zajčka", description: "Zajček v avtomobilu in zajček z modnimi supergi" },
+      { id: 108, image: easterBunnyChickImage, title: "Zajček in piščanček", description: "Zajček z očali in piščanček s sončnimi očali" },
+      { id: 109, image: easterFullCollectionImage, title: "Celotna spomladanska kolekcija", description: "Vsi spomladanski leseni unikatni izdelki skupaj" },
+      { id: 110, image: easterBunnyChick2Image, title: "Zajček, račka in piščanček", description: "Ljubka kombinacija zajčka, račke in piščančka v jajčku" },
+    ],
   },
   {
-    id: 2,
-    image: santaSignImage,
-    title: "Božiček s tablico",
-    description: "Vesele praznike - dekorativna tabla z Božičkom in jelenom",
-  },
-  {
-    id: 3,
-    image: snowmanReindeerImage,
-    title: "Snežak in jelenček",
-    description: "Ljubka zimska dekoracija za pred hišo ali v vrt",
-  },
-  {
-    id: 4,
-    image: adventCandlesImage,
-    title: "Adventne sveče",
-    description: "Ročno poslikane lesene adventne sveče in venčki",
-  },
-  {
-    id: 5,
-    image: grinchTreesImage,
-    title: "Smrečice in Grinch",
-    description: "Moderne lesene smrečice in Grinch dekoracije",
-  },
-  {
-    id: 6,
-    image: ornamentsImage,
-    title: "Lesene bunkice",
-    description: "Pisane lesene bunkice z okraski in pentljami",
-  },
-  {
-    id: 7,
-    image: snowmanCoupleImage,
-    title: "Snežaka",
-    description: "Par snežakov - popolna zimska dekoracija",
-  },
-  {
-    id: 8,
-    image: lineupImage,
-    title: "Praznična kolekcija",
-    description: "Celotna kolekcija prazničnih lesenih figur",
+    key: "winter",
+    label: "❄️ Zimska",
+    products: [
+      { id: 1, image: gnomesImage, title: "Leseni škratki", description: "Prikupni škratki z darili v različnih velikostih" },
+      { id: 2, image: santaSignImage, title: "Božiček s tablico", description: "Vesele praznike - dekorativna tabla z Božičkom in jelenom" },
+      { id: 3, image: snowmanReindeerImage, title: "Snežak in jelenček", description: "Ljubka zimska dekoracija za pred hišo ali v vrt" },
+      { id: 4, image: adventCandlesImage, title: "Adventne sveče", description: "Ročno poslikane lesene adventne sveče in venčki" },
+      { id: 5, image: grinchTreesImage, title: "Smrečice in Grinch", description: "Moderne lesene smrečice in Grinch dekoracije" },
+      { id: 6, image: ornamentsImage, title: "Lesene bunkice", description: "Pisane lesene bunkice z okraski in pentljami" },
+      { id: 7, image: snowmanCoupleImage, title: "Snežaka", description: "Par snežakov - popolna zimska dekoracija" },
+      { id: 8, image: lineupImage, title: "Praznična kolekcija", description: "Celotna kolekcija prazničnih lesenih figur" },
+    ],
   },
 ];
 
 const GallerySection = () => {
-  const [selectedImage, setSelectedImage] = useState<typeof products[0] | null>(null);
+  const [selectedImage, setSelectedImage] = useState<Product | null>(null);
+  const [activeCollection, setActiveCollection] = useState("spring");
+
+  const currentCollection = collections.find((c) => c.key === activeCollection)!;
 
   return (
     <section id="izdelki" className="section-padding bg-muted/30">
@@ -81,9 +92,26 @@ const GallerySection = () => {
           </p>
         </div>
 
+        {/* Collection Tabs */}
+        <div className="flex justify-center gap-3 mb-8 md:mb-12">
+          {collections.map((collection) => (
+            <button
+              key={collection.key}
+              onClick={() => setActiveCollection(collection.key)}
+              className={`px-5 py-2.5 rounded-full text-sm sm:text-base font-semibold transition-all duration-300 ${
+                activeCollection === collection.key
+                  ? "bg-primary text-primary-foreground shadow-warm"
+                  : "bg-background text-muted-foreground hover:bg-accent hover:text-accent-foreground border border-border"
+              }`}
+            >
+              {collection.label}
+            </button>
+          ))}
+        </div>
+
         {/* Gallery Grid */}
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-6">
-          {products.map((product, index) => (
+          {currentCollection.products.map((product, index) => (
             <div
               key={product.id}
               className="group relative rounded-xl sm:rounded-2xl overflow-hidden cursor-pointer shadow-warm hover:shadow-warm-lg transition-all duration-500 animate-scale-in opacity-0"
