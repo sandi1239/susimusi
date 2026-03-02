@@ -87,27 +87,28 @@ export default {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
-        snowfall: {
-          "0%": { 
-            transform: "translateY(-10px) translateX(0)",
-            opacity: "0"
-          },
-          "10%": {
-            opacity: "1"
-          },
-          "90%": {
-            opacity: "1"
-          },
-          "100%": { 
-            transform: "translateY(100vh) translateX(20px)",
-            opacity: "0"
-          },
+        "sunbeam-1": {
+          "0%": { transform: "rotate(0deg) scale(1)", opacity: "0.07" },
+          "50%": { transform: "rotate(3deg) scale(1.1)", opacity: "0.1" },
+          "100%": { transform: "rotate(0deg) scale(1)", opacity: "0.07" },
+        },
+        "sunbeam-2": {
+          "0%": { transform: "rotate(0deg) scale(1)", opacity: "0.06" },
+          "50%": { transform: "rotate(-2deg) scale(1.05)", opacity: "0.09" },
+          "100%": { transform: "rotate(0deg) scale(1)", opacity: "0.06" },
+        },
+        "sunbeam-3": {
+          "0%": { transform: "translateX(0) scale(1)", opacity: "0.04" },
+          "50%": { transform: "translateX(5%) scale(1.1)", opacity: "0.07" },
+          "100%": { transform: "translateX(0) scale(1)", opacity: "0.04" },
         },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        snowfall: "snowfall linear infinite",
+        "sunbeam-1": "sunbeam-1 12s ease-in-out infinite",
+        "sunbeam-2": "sunbeam-2 15s ease-in-out infinite",
+        "sunbeam-3": "sunbeam-3 18s ease-in-out infinite",
       },
       boxShadow: {
         'warm': '0 10px 40px -10px hsl(var(--wood-medium) / 0.3)',
